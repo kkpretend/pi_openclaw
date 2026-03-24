@@ -18,8 +18,8 @@ import config
 sys.path.append("/home/pi/Whisplay/Driver")
 from WhisPlay import WhisPlayBoard  # pyright: ignore[reportMissingImports]
 
-_FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-_FONT_PATH_REGULAR = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+_FONT_PATH = "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf"
+_FONT_PATH_REGULAR = "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf"
 _EMOJI_FONT_PATHS = [
     "/usr/share/fonts/opentype/noto/NotoColorEmoji.ttf",
     "/usr/share/fonts/truetype/noto/NotoEmoji-Regular.ttf",
