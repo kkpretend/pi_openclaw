@@ -19,10 +19,10 @@ logging.basicConfig(
 log = logging.getLogger("openclaw")
 from display import Display
 from record_audio import Recorder, check_audio_level
-from transcribe_openai import transcribe
+from transcribe_bailian import transcribe
 from openclaw_client import stream_response
 from button_ptt import ButtonPTT, State
-from tts_openai import TTSPlayer
+from tts_bailian import TTSPlayer
 
 
 class Assistant:
@@ -201,7 +201,7 @@ class Assistant:
             # Streaming TTS: batch 2–3 sentences for natural flow
             if self._tts:
                 tts_buffer += delta
-                sentence_ends = list(re.finditer(r"[.!?]\s|\n", tts_buffer))
+                sentence_ends = list(re.finditer(r"[.!?。！？]|\n", tts_buffer))
                 if len(sentence_ends) >= 2:
                     cut = sentence_ends[1].end()
                     chunk = tts_buffer[:cut].strip()
