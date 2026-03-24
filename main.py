@@ -90,7 +90,7 @@ class Assistant:
             self.display.set_status(
                 "Listening...",
                 color=(140, 200, 255),
-                subtitle="Speak now",
+                subtitle="请开始说话",
                 accent_color=(60, 140, 255),
             )
         try:
@@ -136,7 +136,7 @@ class Assistant:
             self.display.set_status(
                 "No speech detected",
                 color=(160, 160, 160),
-                subtitle="Try again",
+                subtitle="请重试",
                 accent_color=(80, 80, 80),
             )
             time.sleep(1.5)
@@ -156,7 +156,7 @@ class Assistant:
             self.display.set_status(
                 "Transcribing...",
                 color=(255, 230, 100),
-                subtitle="One moment",
+                subtitle="请稍候",
                 accent_color=(255, 180, 0),
             )
         t0 = time.monotonic()
@@ -262,7 +262,7 @@ class Assistant:
         self.display.set_status(
             msg[:50] + ("..." if len(msg) > 50 else ""),
             color=(255, 120, 120),
-            subtitle="Something went wrong",
+            subtitle="出现错误",
             accent_color=(200, 0, 0),
         )
         time.sleep(3)
